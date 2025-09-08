@@ -6,4 +6,4 @@ RUN go build -o app
 FROM debian:bookworm-slim
 WORKDIR /app
 COPY --from=builder /app/app .
-CMD ["./app"]
+ENTRYPOINT ["./app"]
