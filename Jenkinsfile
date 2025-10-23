@@ -37,7 +37,7 @@ pipeline {
         script {
           sh """
             cd ${env.PRJ_NAME}
-            docker build -t ${env.REPO}/${env.PRJ_NAME}:${params.TAG}
+            docker build -t ${env.REPO}/${env.PRJ_NAME}:${params.TAG} ./
             docker login -u ${env.REPO} -p ${env.TOKEN}
             docker push ${env.REPO}/${env.PRJ_NAME}:${params.TAG}
             docker logout
