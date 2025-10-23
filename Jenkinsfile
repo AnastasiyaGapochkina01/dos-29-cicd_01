@@ -22,7 +22,7 @@ pipeline {
               echo "Repo exists. Updating..."
               cd ${env.PRJ_NAME}
               git checkout ${params.REVISION}
-              git pull
+              git fetch
             else
               echo "Clone repo"
               git clone ${env.GIT_URL} ${env.PRJ_NAME}
