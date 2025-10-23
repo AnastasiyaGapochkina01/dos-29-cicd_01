@@ -25,7 +25,7 @@ pipeline {
               git pull
             else
               echo "Clone repo"
-              git clone ${env.GIT_URL}
+              git clone ${env.GIT_URL} ${env.PRJ_NAME}
             fi
           """
         }
