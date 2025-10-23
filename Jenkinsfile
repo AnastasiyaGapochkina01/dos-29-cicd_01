@@ -23,6 +23,7 @@ pipeline {
               cd ${env.PRJ_NAME}
               git checkout ${params.REVISION}
               git fetch
+              git pull
             else
               echo "Clone repo"
               git clone ${env.GIT_URL} ${env.PRJ_NAME}
