@@ -5,7 +5,7 @@ pipeline {
     string(name: 'TAG', defaultValue: 'latest')
   }
 
-  environmet {
+  environment {
     DOCKER_REPO="anestesia01/goapp"
     PRJ_NAME="simple-go"
     GIT_URL="git@github.com:AnastasiyaGapochkina01/dos-29-cicd_01.git"
