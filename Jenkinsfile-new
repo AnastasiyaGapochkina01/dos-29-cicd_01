@@ -33,7 +33,7 @@ pipeline {
         script {
           sh """
             cd ${env.PRJ_NAME}
-            docker build -t ${env.DOCKER_REPO}:${params.TAG}
+            docker build -t ${env.DOCKER_REPO}:${params.TAG} ./
           """
         }
       }
