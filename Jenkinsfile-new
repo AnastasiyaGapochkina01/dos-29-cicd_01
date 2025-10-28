@@ -47,6 +47,7 @@ pipeline {
         script {
           sh """
             cd ${env.PRJ_NAME}
+            go mod init simple-go
             go test ./
           """
         }
